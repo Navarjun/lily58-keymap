@@ -78,10 +78,10 @@
 
             display-name = "Navigation";
             bindings = <
-&trans     &trans    &trans    &kp PG_UP  &trans     &trans                        &trans                  &trans          &mkp MCLK      &trans           &trans       &trans
-&trans     &trans    &trans    &kp UP     &trans     &trans                        &kp C_AC_SCROLL_UP      &mkp LCLK       &mmv MOVE_UP   &mkp RCLK        &trans       &trans
-&kp LCTRL  &kp HOME  &kp LEFT  &kp DOWN   &kp RIGHT  &kp END                       &trans                  &mmv MOVE_LEFT  &mmv MOVE_DOWN &mmv MOVE_RIGHT  &trans       &trans
-&kp LSHFT  &trans    &trans    &kp PG_DN  &trans     &trans   &trans    &trans     &kp C_AC_SCROLL_DOWN    &trans          &trans         &trans           &trans       &trans
+&trans     &trans    &trans    &kp PG_UP  &trans     &trans                        &trans                  &trans          &trans        &trans           &trans       &trans
+&trans     &trans    &trans    &kp UP     &trans     &trans                        &kp C_AC_SCROLL_UP      &mkp LCLK       &trans        &mkp RCLK        &trans       &trans
+&kp LCTRL  &kp HOME  &kp LEFT  &kp DOWN   &kp RIGHT  &kp END                       &trans                  &trans          &trans        &trans           &trans       &trans
+&kp LSHFT  &trans    &trans    &kp PG_DN  &trans     &trans   &trans    &trans     &kp C_AC_SCROLL_DOWN    &trans          &trans        &trans           &trans       &trans
                                &trans     &trans     &trans   &trans    &trans     &trans                  &trans          &trans
             >;
         };
