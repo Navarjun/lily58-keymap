@@ -63,7 +63,7 @@
 &kp F1     &kp F2     &kp F3  &kp F4  &kp F5           &kp F6                               &kp F7        &kp F8          &kp F9        &kp F10    &kp F11       &kp F12
 &kp GRAVE  &kp N7     &kp N8  &kp N9  &kp KP_LPAR      &kp KP_RPAR                          &kp LBKT      &kp RBKT        &kp LBRC      &kp RBRC   &kp KP_MINUS  &kp KP_PLUS
 &kp LCTRL  &kp N4     &kp N5  &kp N6  &kp N0           &kp DOLLAR                           &kp SEMICOLON &kp SQT         &kp AMPERSAND &kp PIPE   &kp KP_DIVIDE &kp ASTERISK
-&kp LSHFT  &kp N1     &kp N2  &kp N3  &kp KP_EQUAL     &kp PERCENT  &PRINTSCREEN    &trans  &kp COMMA     &kp DOT         &kp AT        &kp DOLLAR &kp PERCENT   &kp RSHFT
+&kp LSHFT  &kp N1     &kp N2  &kp N3  &kp KP_EQUAL     &kp PERCENT  &kp PRINTSCREEN &trans  &kp COMMA     &kp DOT         &kp AT        &kp DOLLAR &kp PERCENT   &kp RSHFT
                               &trans  &trans           &trans       &trans          &trans  &trans        &trans          &trans
             >;
         };
