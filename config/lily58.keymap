@@ -47,7 +47,7 @@
 &kp TAB        &kp Q          &kp W             &kp E         &kp R           &kp T                               &kp Y     &kp U          &kp I          &kp O         &kp P                  &kp BACKSLASH
 &mo NUM        &kp A          &kp S             &kp D         &kp F           &kp G                               &kp H     &kp J          &kp K          &kp L         &kp SEMICOLON          &kp LALT
 &kp LSHFT      &kp Z          &kp X             &kp C         &kp V           &kp B      &kp SPACE     &kp SPACE  &kp N     &kp M          &kp COMMA      &kp DOT       &kp SLASH              &kp RSHFT
-                                                &kp LGUI      &kp LALT        &kp LCTRL  &mo SYMBOL    &kp NAVI  &mo RCTRL  &kp RALT       &kp DELETE
+                                                &kp LGUI      &kp LALT        &kp LCTRL  &mo SYMBOL    &mo NAVI   &kp RCTRL  &kp RALT       &kp DELETE
             >;
         };
 
@@ -63,7 +63,7 @@
             bindings = <
 &kp F1     &kp F2             &kp F3       &kp F4     &kp F5           &kp F6                                &kp F7         &kp F8          &kp F9         &kp F10     &kp F11        &kp F12
 &kp GRAVE  &kp EXCL           &kp AT       &kp HASH   &kp LPAR         &kp RPAR                              &kp LBKT       &kp RBKT        &kp COLON      &kp SEMI    &kp MINUS      &kp PLUS
-&kp TILDE  &kp DOLLAR         &kp PERCENT  &kp CARET  &kp LT           &kp GT                                &kp LBRC       &kp RBRC        &kp SQT        &kp DQT     &kp DIVIDE     &kp ASTERISK
+&kp TILDE  &kp DOLLAR         &kp PERCENT  &kp CARET  &kp LT           &kp GT                                &kp LBRC       &kp RBRC        &kp SQT        &kp DQT     &kp SLASH      &kp ASTERISK
 &kp LSHFT  &kp AMPERSAND      &trans       &trans     &kp EQUAL        &kp UNDER    &kp PRINTSCREEN  &trans  &kp COMMA      &kp DOT         &kp PIPE       &kp QMARK   &kp NUBS       &kp RSHFT
                                            &trans     &trans           &trans       &trans           &trans  &trans         &kp RALT        &trans
             >;
@@ -110,11 +110,11 @@
 
             display-name = "num";
             bindings = <
-&kp F1     &kp F2     &kp F3  &kp F4  &kp F5      &kp F6                           &trans  &trans  &trans  &trans  &trans  &trans
-&kp GRAVE  &kp N7     &kp N8  &kp N9  &trans      &trans                           &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp N4     &kp N5  &kp N6  &kp N0      &trans                           &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp N1     &kp N2  &kp N3  &trans      &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans  &trans      &trans  &trans  &trans  &trans   &trans          &trans
+&kp F1  &kp F2     &kp F3  &kp F4  &kp F5   &kp F6                  &kp F7  &kp F8  &kp F9  &kp F10   &kp F11   &kp F12
+&trans  &kp N7     &kp N8  &kp N9  &trans   &trans                  &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &kp N4     &kp N5  &kp N6  &kp N0   &trans                  &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &kp N1     &kp N2  &kp N3  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans
+                           &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "numbers"
