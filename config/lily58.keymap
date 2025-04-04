@@ -129,11 +129,11 @@
         sys {
             display-name="sys";
             bindings = <
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                           &kp CAPS           &kp KP_NUMLOCK  &kp SCROLLLOCK   &trans  &studio_unlock   &out OUT_TOG
-&trans       &trans        &trans        &trans        &trans        &trans                                 &trans             &trans          &trans           &trans  &trans           &trans
-&trans       &trans        &trans        &trans        &trans        &trans                                 &trans             &trans          &trans           &trans  &trans           &trans
-&bootloader  &trans        &trans        &trans        &trans        &trans        &tog BASEWIN     &trans  &trans             &trans          &trans           &trans  &trans           &bootloader
-                                         &trans        &trans        &trans        &trans           &trans  &kp C_VOLUME_DOWN  &kp C_MUTE      &kp C_VOLUME_UP
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                                 &kp CAPS           &kp KP_NUMLOCK  &kp SCROLLLOCK   &trans  &studio_unlock   &out OUT_TOG
+&trans       &trans        &trans        &trans        &trans        &trans                                       &trans             &trans          &trans           &trans  &trans           &trans
+&trans       &trans        &trans        &trans        &trans        &trans                                       &trans             &trans          &trans           &trans  &trans           &trans
+&bootloader  &trans        &trans        &trans        &trans        &trans        &tog BASEWIN     &trans        &trans             &trans          &trans           &trans  &trans           &bootloader
+                                         &trans        &trans        &trans        &trans           &trans        &kp C_VOLUME_DOWN  &kp C_MUTE      &kp C_VOLUME_UP
             >;
 
             label = "sys";
@@ -162,7 +162,7 @@
         };
         combo_sys {
             timeout-ms = <100>;
-            key-positions = <23 35 49>;
+            key-positions = <55 56 57>;
             bindings = <&mo SYS>;
         };
         combo_enter {
