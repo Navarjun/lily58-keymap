@@ -162,7 +162,7 @@
         };
         combo_sys {
             timeout-ms = <100>;
-            key-positions = <55 56 57>;
+            key-positions = <23 35 49>;
             bindings = <&mo SYS>;
         };
         combo_enter {
