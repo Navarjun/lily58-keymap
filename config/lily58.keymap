@@ -96,7 +96,7 @@
             // |SHIFT  |     |     |PGDOWN|      |      |        |  |       |SCRL-DN|       |SCRLDWN|       |       |       |
             //                     |      | ALT  |      |        |  |       |       |       |       |
 
-            display-name = "navigation";
+            display-name = "navigate";
             bindings = <
 &trans     &trans    &trans    &kp PG_UP  &trans     &trans                        &trans                  &trans  &trans  &trans  &trans  &trans
 &trans     &trans    &trans    &kp UP     &trans     &trans                        &kp C_AC_SCROLL_UP      &trans  &trans  &trans  &trans  &trans
@@ -153,18 +153,18 @@
     combos {
         compatible = "zmk,combos";
         combo_space {
-            timeout-ms = <60>;
-            key-positions = <26 27 28>;
-            bindings = <&kp SPACE>;
+            timeout-ms = <100>;
+            key-positions = <19 20>;
+            bindings = <&mo NUM>;
         };
         combo_enter {
-            timeout-ms = <60>;
+            timeout-ms = <100>;
             key-positions = <31 32 33>;
             bindings = <&kp ENTER>;
         };
     };
 
-    tog {
+    toggle {
         compatible = "zmk,behavior-toggle";
         switch_os {
             #binding-cells = <1>;
