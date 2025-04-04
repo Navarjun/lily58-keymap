@@ -13,8 +13,8 @@
 #define BASEMAC 1
 #define SYMBOL 2
 #define NAVI 3
-#define SYS 4
-#define NUM 5
+#define NUM 4
+#define SYS 5
 
 / {
     behaviors {
@@ -29,6 +29,13 @@
             require-prior-idle-ms = <125>;
             quick-tap-ms = <125>;
         };
+
+        tog: tog {
+            compatible = "zmk,behavior-toggle-layer";
+            label = "TOG";
+            #binding-cells = <1>;
+            toggle-mode = "flip";
+        };
     };
 
     keymap {
@@ -40,7 +47,7 @@
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   \   |
             // |  NUM  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |  ALT  |
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  SPACE |  | SPACE |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-            //                     | GUI  | ALT  | CTRL |  SYM   |  | NAVI  | CTRL | ALT   | DELETE|
+            //                     | GUI  | ALT  | CTRL |  SPACE |  | SYMBOL| CTRL | NAVI  | DELETE|
 
             display-name = "win";
             bindings = <
@@ -66,7 +73,7 @@
 &kp TAB        &kp Q          &kp W             &kp E         &kp R           &kp T                                  &kp Y     &kp U          &kp I          &kp O         &kp P                  &kp BACKSLASH
 &mo NUM        &kp A          &kp S             &kp D         &kp F           &kp G                                  &kp H     &kp J          &kp K          &kp L         &kp SEMICOLON          &kp LALT
 &kp LSHFT      &kp Z          &kp X             &kp C         &kp V           &kp B      &kp SPACE     &kp SPACE     &kp N     &kp M          &kp COMMA      &kp DOT       &kp SLASH              &kp RSHFT
-                                                &kp LCTRL     &kp LALT        &kp LGUI   &mo SPACE     &mo SYMBOL    &kp RGUI  &mo NAVI       &kp DELETE
+                                                &kp LCTRL     &kp LALT        &kp LGUI   &kp SPACE     &mo SYMBOL    &kp RGUI  &mo NAVI       &kp DELETE
             >;
         };
 
@@ -106,19 +113,6 @@
             >;
         };
 
-        sys {
-            display-name="sys";
-            bindings = <
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                           &kp CAPS           &kp KP_NUMLOCK  &kp SCROLLLOCK   &trans  &studio_unlock   &out OUT_TOG
-&trans       &trans        &trans        &trans        &trans        &trans                                 &trans             &trans          &trans           &trans  &trans           &trans
-&trans       &trans        &trans        &trans        &trans        &trans                                 &trans             &trans          &trans           &trans  &trans           &trans
-&bootloader  &trans        &trans        &trans        &trans        &trans        &tog BASEWIN     &trans  &trans             &trans          &trans           &trans  &trans           &bootloader
-                                         &trans        &trans        &trans        &trans           &trans  &kp C_VOLUME_DOWN  &kp C_MUTE      &kp C_VOLUME_UP
-            >;
-
-            label = "sys";
-        };
-
         number_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
@@ -139,6 +133,22 @@
             label = "numbers";
         };
 
+        sys {
+            display-name="sys";
+            bindings = <
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                           &kp CAPS           &kp KP_NUMLOCK  &kp SCROLLLOCK   &trans  &studio_unlock   &out OUT_TOG
+&trans       &trans        &trans        &trans        &trans        &trans                                 &trans             &trans          &trans           &trans  &trans           &trans
+&trans       &trans        &trans        &trans        &trans        &trans                                 &trans             &trans          &trans           &trans  &trans           &trans
+&bootloader  &trans        &trans        &trans        &trans        &trans        &tog BASEWIN     &trans  &trans             &trans          &trans           &trans  &trans           &bootloader
+                                         &trans        &trans        &trans        &trans           &trans  &kp C_VOLUME_DOWN  &kp C_MUTE      &kp C_VOLUME_UP
+            >;
+
+            label = "sys";
+        };
+
+        extra {
+            status = "reserved";
+        };
     };
 
     conditional_layers {
@@ -161,14 +171,6 @@
             timeout-ms = <100>;
             key-positions = <31 32 33>;
             bindings = <&kp ENTER>;
-        };
-    };
-
-    toggle {
-        compatible = "zmk,behavior-toggle";
-        switch_os {
-            #binding-cells = <1>;
-            toggle-mode = "flip";
         };
     };
 };
