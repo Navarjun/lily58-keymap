@@ -90,17 +90,17 @@
 
         navigation_layer {
             // ------------------------------------------------------------------------------------------------------------
-            // |       |     |     | PGUP |      |      |                   |       |       |M-Click|       |       |       |
-            // |       |     |     |  UP  |      |      |                   |SCRL-UP|P-Click| MS-UP |S-Click|       |       |
-            // | CTRL  |HOME |LEFT | DOWN |RIGHT |  END |                   |       |MS-LEFT| MS-DWN|MS-RGHT|       |       |
+            // |       |     |     | PGUP |      |      |                   |       |       |M-Click|       |       |BASEWIN/MAC|
+            // |       |     |     |  UP  |      |      |                   |SCRL-UP|P-Click| MS-UP |S-Click|       |   BT_1    |
+            // | CTRL  |HOME |LEFT | DOWN |RIGHT |  END |                   |       |MS-LEFT| MS-DWN|MS-RGHT|       |    BT_2   |
             // |SHIFT  |     |     |PGDOWN|      |      |        |  |       |SCRL-DN|       |SCRLDWN|       |       |       |
             //                     |      | ALT  |      |        |  |       |       |       |       |
 
             display-name = "navigate";
             bindings = <
-&trans     &trans    &trans    &kp PG_UP  &trans     &trans                        &trans                  &trans  &trans  &trans  &trans  &trans
-&trans     &trans    &trans    &kp UP     &trans     &trans                        &kp C_AC_SCROLL_UP      &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp HOME  &kp LEFT  &kp DOWN   &kp RIGHT  &kp END                       &trans                  &trans  &trans  &trans  &trans  &trans
+&trans     &trans    &trans    &kp PG_UP  &trans     &trans                        &trans                  &trans  &trans  &trans  &trans  &tog BASEWIN
+&trans     &trans    &trans    &kp UP     &trans     &trans                        &kp C_AC_SCROLL_UP      &trans  &trans  &trans  &trans  &bt BT_SEL 0
+&kp LCTRL  &kp HOME  &kp LEFT  &kp DOWN   &kp RIGHT  &kp END                       &trans                  &trans  &trans  &trans  &trans  &bt BT_SEL 1
 &kp LSHFT  &trans    &trans    &kp PG_DN  &trans     &trans   &trans    &trans     &kp C_AC_SCROLL_DOWN    &trans  &trans  &trans  &trans  &trans
                                &trans     &trans     &trans   &trans    &trans     &trans                  &trans  &trans
             >;
