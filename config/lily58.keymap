@@ -144,7 +144,7 @@
        compatible = "zmk,conditional-layers";
            adjust_layer {
            if-layers = <NAVI SYMBOL>;
-           then-layer = <SYS>;
+           then-layer = <5>;
        };
     };
 
@@ -158,7 +158,7 @@
         combo_sys {
             timeout-ms = <100>;
             key-positions = <42 43>;
-            bindings = <&mo SYS>;
+            bindings = <&mo 5>;
         };
         combo_enter {
             timeout-ms = <100>;
