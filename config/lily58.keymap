@@ -101,7 +101,7 @@
 &trans     &trans    &trans    &kp PG_UP  &trans     &trans                        &trans                  &trans  &trans  &trans  &trans  &tog BASEWIN
 &trans     &trans    &trans    &kp UP     &trans     &trans                        &kp C_AC_SCROLL_UP      &trans  &trans  &trans  &trans  &bt BT_SEL 0
 &kp LCTRL  &kp HOME  &kp LEFT  &kp DOWN   &kp RIGHT  &kp END                       &trans                  &trans  &trans  &trans  &trans  &bt BT_SEL 1
-&kp LSHFT  &trans    &trans    &kp PG_DN  &trans     &trans   &trans    &trans     &kp C_AC_SCROLL_DOWN    &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &trans    &trans    &kp PG_DN  &trans     &trans   &trans    &trans     &kp C_AC_SCROLL_DOWN    &trans  &trans  &trans  &trans  &studio_unlock
                                &trans     &trans     &trans   &trans    &trans     &trans                  &trans  &trans
             >;
         };
@@ -144,7 +144,7 @@
        compatible = "zmk,conditional-layers";
            adjust_layer {
            if-layers = <NAVI SYMBOL>;
-           then-layer = <5>;
+           then-layer = <SYS>;
        };
     };
 
@@ -158,7 +158,7 @@
         combo_sys {
             timeout-ms = <100>;
             key-positions = <42 43>;
-            bindings = <&mo 5>;
+            bindings = <&mo SYS>;
         };
         combo_enter {
             timeout-ms = <100>;
