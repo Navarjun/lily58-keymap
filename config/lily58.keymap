@@ -62,7 +62,7 @@
         switch_tab: switch_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp TAB>, <&macro_release &kp LCTRL>;
+            bindings = <&kp LC(TAB)>;
         };
         terminal_terminate: terminal_terminate {
             compatible = "zmk,behavior-macro";
@@ -256,7 +256,7 @@
             bindings = <&switch_win_on_win>; // ALT+Tab
         };
         switch_tab_combo {
-            timeout-ms = <60>;
+            timeout-ms = <150>;
             key-positions = <51 12>; // ALT + Tab
             layers = <BASEWIN BASEMAC>;
             bindings = <&switch_tab>; // CTRL+Tab
