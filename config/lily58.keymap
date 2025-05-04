@@ -74,7 +74,7 @@
             #binding-cells = <0>;
             bindings 
                 = <&macro_press &kp LCTRL>, 
-                  <&macro_tap &kp ESC>,
+                  <&macro_tap &kp GRAVE>,
                   <&macro_release &kp LCTRL>;
         };
         goto_line: goto_line {
