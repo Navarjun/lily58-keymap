@@ -215,13 +215,13 @@
             key-positions = <52 12>; // Ctrl + Tab
             layers = <BASEWIN>;
             bindings = <&kp LA(TAB)>; // Alt+Tab
-        }
+        };
         switch_tab {
             timeout-ms = <100>;
             key-positions = <51 12>; // Alt + Tab
             layers = <BASEWIN BASEMAC>;
             bindings = <&kp LC(TAB)>; // CTRL+Tab
-        }
+        };
         terminal_terminate_combo {
             timeout-ms = <100>;
             key-positions = <53 39>; // Space + Tab
