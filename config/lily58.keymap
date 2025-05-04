@@ -62,20 +62,12 @@
         switch_tab: switch_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LCTRL &kp TAB>;
+            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp TAB>, <&macro_release &kp LCTRL>;
         };
         terminal_terminate: terminal_terminate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap &kp LCTRL &kp C>;
-        };
-        switch_terminal: switch_terminal {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings 
-                = <&macro_press &kp LCTRL>, 
-                  <&macro_tap &kp GRAVE>,
-                  <&macro_release &kp LCTRL>;
         };
         goto_line: goto_line {
             compatible = "zmk,behavior-macro";
@@ -267,19 +259,13 @@
             timeout-ms = <60>;
             key-positions = <51 12>; // ALT + Tab
             layers = <BASEWIN BASEMAC>;
-            bindings = <&switch_tab>; // CTRL/CMD+Tab
+            bindings = <&switch_tab>; // CTRL+Tab
         };
         terminal_terminate_combo {
             timeout-ms = <60>;
             key-positions = <53 39>; // Space + Tab
             layers = <BASEWIN BASEMAC>;
             bindings = <&terminal_terminate>; // CTRL+C
-        };
-        switch_terminal_combo {
-            timeout-ms = <60>;
-            key-positions = <52 0>; // CTRL + ESC
-            layers = <BASEWIN BASEMAC>;
-            bindings = <&switch_terminal>; // CTRL/CMD+`
         };
         goto_line_combo {
             timeout-ms = <60>;
