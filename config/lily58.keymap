@@ -91,7 +91,7 @@
 &kp TAB        &kp Q          &kp W             &kp E         &kp R              &kp T                                &kp Y      &kp U          &kp I          &kp O         &kp P                  &kp BACKSLASH
 &mo NUM        &kp A          &kp S             &kp D         &kp F              &kp G                                &kp H      &kp J          &kp K          &kp L         &kp SEMICOLON          &kp LALT
 &kp LSHFT      &kp Z          &kp X             &kp C         &kp V              &kp B      &kp SPACE     &mo NUM     &kp B      &kp N          &kp M          &kp COMMA     &kp DOT                &kp SLASH
-                                                &kp LCTRL     &tpmt LALT LCTRL   &kp LGUI   &kp SPACE     &mo SYMBOL  &kp RGUI   &mo NAVI_MAC   &kp DELETE
+                                                &kp LCTRL     &kp LALT           &kp LGUI   &kp SPACE     &mo SYMBOL  &kp RGUI   &mo NAVI_MAC   &kp DELETE
             >;
         };
 
