@@ -57,62 +57,37 @@
         switch_win_on_win: switch_win_on_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp TAB>
-                ;
+            bindings = <&macro_tap &kp LALT &kp TAB>;
         };
         switch_tab: switch_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp TAB>
-                ;
+            bindings = <&macro_tap &kp LCTRL &kp TAB>;
         };
         terminal_terminate: terminal_terminate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp C>
-                , <&macro_release &kp LCTRL>
-                ;
+            bindings = <&macro_tap &kp LCTRL &kp C>;
         };
         switch_terminal: switch_terminal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp ESC>
-                ;
+            bindings = <&macro_tap &kp LCTRL &kp ESC>;
         };
         goto_line: goto_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp G>
-                , <&macro_release &kp LCTRL>
-                ;
+            bindings = <&macro_tap &kp LCTRL &kp G>;
         };
         mac_home: mac_home {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp LEFT>
-                , <&macro_release &kp LGUI>
-                ;
+            bindings = <&macro_tap &kp LGUI &kp LEFT>;
         };
         mac_end: mac_end {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp RIGHT>
-                , <&macro_release &kp LGUI>
-                ;
+            bindings = <&macro_tap &kp LGUI &kp RIGHT>;
         };
     };
 
