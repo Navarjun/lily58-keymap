@@ -283,7 +283,7 @@
         };
         goto_line_combo {
             timeout-ms = <60>;
-            key-positions = <52 0>; // CMD + G
+            key-positions = <52 29>; // CMD + G
             layers = <BASEMAC>;
             bindings = <&goto_line>; // CTRL+G
         };
