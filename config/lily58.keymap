@@ -72,7 +72,10 @@
         switch_terminal: switch_terminal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp LCTRL &kp ESC>;
+            bindings 
+                = <&macro_press &kp LCTRL>, 
+                  <&macro_tap &kp ESC>,
+                  <&macro_release &kp LCTRL>;
         };
         goto_line: goto_line {
             compatible = "zmk,behavior-macro";
