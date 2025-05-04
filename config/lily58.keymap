@@ -53,6 +53,66 @@
             #binding-cells = <0>;
             display-name = "Toggle to Mac";
             bindings = <&macro_tap &tog_off BASEWIN &tog_on BASEMAC>;
+        };        
+        switch_win_on_win: switch_win_on_win {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp TAB>
+                ;
+        };
+        switch_tab: switch_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp TAB>
+                ;
+        };
+        terminal_terminate: terminal_terminate {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        switch_terminal: switch_terminal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp ESC>
+                ;
+        };
+        goto_line: goto_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp G>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        mac_home: mac_home {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        mac_end: mac_end {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LGUI>
+                ;
         };
     };
 
@@ -248,63 +308,6 @@
             key-positions = <52 0>; // CMD + G
             layers = <BASEMAC>;
             bindings = <&goto_line>; // CTRL+G
-        };
-    };
-
-    macros {
-        compatible = "zmk,behavior-macro";
-        switch_win_on_win: switch_win_on_win {
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp TAB>
-                ;
-        };
-        switch_tab: switch_tab {
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp TAB>
-                ;
-        };
-        terminal_terminate: terminal_terminate {
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp C>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-        switch_terminal: switch_terminal {
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp ESC>
-                ;
-        };
-        goto_line: goto_line {
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp G>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-        mac_home: mac_home {
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp LEFT>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        mac_end: mac_end {
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp RIGHT>
-                , <&macro_release &kp LGUI>
-                ;
         };
     };
 };
