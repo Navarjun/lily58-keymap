@@ -12,9 +12,10 @@
 #define BASEWIN 0
 #define BASEMAC 1
 #define SYMBOL 2
-#define NAVI 3
-#define NUM 4
-#define SYS 5
+#define NAVI_WIN 3
+#define NAVI_MAC 4
+#define NUM 5
+#define SYS 6
 
 / {
     behaviors {
@@ -72,7 +73,7 @@
 &kp TAB        &kp Q          &kp W             &kp E         &kp R           &kp T                                &kp Y      &kp U          &kp I          &kp O         &kp P                  &kp BACKSLASH
 &mo NUM        &kp A          &kp S             &kp D         &kp F           &kp G                                &kp H      &kp J          &kp K          &kp L         &kp SEMICOLON          &kp LALT
 &kp LSHFT      &kp Z          &kp X             &kp C         &kp V           &kp B      &kp SPACE     &kp SPACE   &kp B      &kp N          &kp M          &kp COMMA     &kp DOT                &kp SLASH
-                                                &kp LGUI      &kp LALT        &kp LCTRL  &kp SPACE     &mo SYMBOL  &kp RCTRL  &mo NAVI      &kp DELETE
+                                                &kp LGUI      &kp LALT        &kp LCTRL  &kp SPACE     &mo SYMBOL  &kp RCTRL  &mo NAVI_WIN   &kp DELETE
             >;
         };
 
@@ -90,7 +91,7 @@
 &kp TAB        &kp Q          &kp W             &kp E         &kp R           &kp T                                &kp Y      &kp U          &kp I          &kp O         &kp P                  &kp BACKSLASH
 &mo NUM        &kp A          &kp S             &kp D         &kp F           &kp G                                &kp H      &kp J          &kp K          &kp L         &kp SEMICOLON          &kp LALT
 &kp LSHFT      &kp Z          &kp X             &kp C         &kp V           &kp B      &kp SPACE     &kp SPACE   &kp B      &kp N          &kp M          &kp COMMA     &kp DOT                &kp SLASH
-                                                &kp LCTRL     &kp LALT        &kp LGUI   &kp SPACE     &mo SYMBOL  &kp RGUI   &mo NAVI      &kp DELETE
+                                                &kp LCTRL     &kp LALT        &kp LGUI   &kp SPACE     &mo SYMBOL  &kp RGUI   &mo NAVI_MAC   &kp DELETE
             >;
         };
 
@@ -107,12 +108,12 @@
 &kp F1     &kp F2             &kp F3       &kp F4     &kp F5           &kp F6                                &kp F7         &kp F8          &kp F9         &kp F10     &kp F11        &kp F12
 &kp GRAVE  &kp EXCL           &kp AT       &kp LPAR   &kp RPAR         &kp HASH                              &kp COLON      &kp LBKT        &kp RBKT       &kp SQT     &kp MINUS      &kp PLUS
 &kp TILDE  &kp GRAVE          &kp DOLLAR   &kp LT     &kp GT           &kp CARET                             &kp SEMI       &kp LBRC        &kp RBRC       &kp DQT     &kp SLASH      &kp ASTERISK
-&kp LSHFT  &trans             &kp PERCENT  &kp AMPERSAND  &kp EQUAL        &kp UNDER    &kp PRINTSCREEN  &trans  &kp COMMA      &kp DOT         &kp PIPE       &kp QMARK   &kp NUBS       &kp RSHFT
+&kp LSHFT  &trans             &kp PERCENT  &kp AMPERSAND  &kp EQUAL    &kp UNDER    &kp PRINTSCREEN  &trans  &kp COMMA      &kp DOT         &kp PIPE       &kp QMARK   &kp NUBS       &kp RSHFT
                                            &trans     &trans           &trans       &trans           &trans  &trans         &trans         &trans
             >;
         };
 
-        navigation_layer {
+        navigation_win_layer {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |       |       |M-Click|       |       |       |
             // |       |     |     |  UP  |      | PGUP |                   |SCRL-UP|P-Click| MS-UP |S-Click|       |       |
@@ -120,13 +121,31 @@
             // |SHIFT  |     |     |PGDOWN|      | PGDN |        |  |       |SCRL-DN|       |SCRLDWN|       |       |       |
             //                     |      | ALT  |      |        |  |       |       |       |       |
 
-            display-name = "navigate";
+            display-name = "navi-win";
             bindings = <
 &kp F1     &kp F2    &kp F3    &kp F4     &kp F5     &kp F6                          &kp F7                  &kp F8  &kp F9  &kp F10  &kp F11   &kp F12
 &trans     &trans    &kp HOME  &kp UP     &kp END    &kp PG_UP                       &kp C_AC_SCROLL_UP      &trans  &trans  &trans   &trans    &trans
 &kp LCTRL  &trans    &kp LEFT  &kp DOWN   &kp RIGHT  &trans                          &trans                  &trans  &kp RSHFT  &kp RSHFT   &trans    &trans
 &kp LSHFT  &trans    &trans    &trans     &trans     &kp PG_DN  &trans    &trans     &kp C_AC_SCROLL_DOWN    &trans  &trans  &trans   &trans    &trans
                                &trans     &trans     &trans     &trans    &trans     &trans                  &trans  &trans
+            >;
+        };
+
+        navigation_mac_layer {
+            // ------------------------------------------------------------------------------------------------------------
+            // |       |     |      |      |      |      |                   |       |       |M-Click|       |       |       |
+            // |       |     |CMD+<-|  UP  |CMD+->| PGUP |                   |SCRL-UP|P-Click| MS-UP |S-Click|       |       |
+            // | CTRL  |HOME |LEFT  | DOWN |RIGHT |      |                   |       |MS-LEFT| MS-DWN|MS-RGHT|       |       |
+            // |SHIFT  |     |      |PGDOWN|      | PGDN |        |  |       |SCRL-DN|       |SCRLDWN|       |       |       |
+            //                      |      | ALT  |      |        |  |       |       |       |       |
+
+            display-name = "navi-mac";
+            bindings = <
+&kp F1     &kp F2    &kp F3               &kp F4     &kp F5               &kp F6                          &kp F7                  &kp F8  &kp F9  &kp F10  &kp F11   &kp F12
+&trans     &trans    &macro_tap mac_home  &kp UP     &macro_tap mac_end   &kp PG_UP                       &kp C_AC_SCROLL_UP      &trans  &trans  &trans   &trans    &trans
+&kp LCTRL  &trans    &kp LEFT             &kp DOWN   &kp RIGHT            &trans                          &trans                  &trans  &kp RSHFT  &kp RSHFT   &trans    &trans
+&kp LSHFT  &trans    &trans               &trans     &trans               &kp PG_DN  &trans    &trans     &kp C_AC_SCROLL_DOWN    &trans  &trans  &trans   &trans    &trans
+                                          &trans     &trans               &trans     &trans    &trans     &kp RALT                &trans  &trans
             >;
         };
 
@@ -175,19 +194,113 @@
     combos {
         compatible = "zmk,combos";
         combo_numbers {
-            timeout-ms = <100>;
+            timeout-ms = <60>;
             key-positions = <19 20>;
             bindings = <&mo NUM>;
         };
-        combo_navi {
-            timeout-ms = <100>;
+        combo_navi_win {
+            timeout-ms = <60>;
             key-positions = <30 31>;
-            bindings = <&mo NAVI>;
+            layers = <BASEWIN>;
+            bindings = <&mo NAVI_WIN>;
+        };
+        combo_navi_mac {
+            timeout-ms = <60>;
+            key-positions = <30 31>;
+            layers = <BASEMAC>;
+            bindings = <&mo NAVI_MAC>;
         };
         combo_enter {
-            timeout-ms = <100>;
+            timeout-ms = <60>;
             key-positions = <31 32 33>;
             bindings = <&kp ENTER>;
+        };
+        switch_win_on_win {
+            timeout-ms = <60>;
+            key-positions = <52 12>; // CTRL+Tab
+            layers = <BASEWIN>;
+            bindings = <&macro_tap switch_win_on_win>; // ALT+Tab
+        };
+        switch_tab {
+            timeout-ms = <60>;
+            key-positions = <51 12>; // ALT + Tab
+            layers = <BASEWIN BASEMAC>;
+            bindings = <&macro_tap switch_tab>; // CTRL/CMD+Tab
+        };
+        terminal_terminate {
+            timeout-ms = <60>;
+            key-positions = <53 39>; // Space + Tab
+            layers = <BASEWIN BASEMAC>;
+            bindings = <&macro_tap terminal_terminate>; // CTRL+C
+        };
+        switch_terminal {
+            timeout-ms = <60>;
+            key-positions = <52 0>; // CTRL + ESC
+            layers = <BASEWIN BASEMAC>;
+            bindings = <&macro_tap switch_terminal>; // CTRL/CMD+`
+        };
+        goto_line {
+            timeout-ms = <60>;
+            key-positions = <52 0>; // CMD + G
+            layers = <BASEMAC>;
+            bindings = <&macro_tap goto_line>; // CTRL+G
+        };
+    };
+
+    macros {
+        compatible = "zmk,behavior-macro";
+        switch_win_on_win: switch_win_on_win {
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp TAB>
+                ;
+        };
+        switch_tab: switch_tab {
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp TAB>
+                ;
+        };
+        terminal_terminate: terminal_terminate {
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp C>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        switch_terminal: switch_terminal {
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp ESC>
+                ;
+        };
+        goto_line: goto_line {
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp G>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        mac_home: mac_home {
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp LEFT>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+        mac_end: mac_end {
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp RIGHT>
+                , <&macro_release &kp LGUI>
+                ;
         };
     };
 };
