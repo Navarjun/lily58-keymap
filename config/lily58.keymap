@@ -127,7 +127,7 @@
 &trans     &trans    &kp HOME  &kp UP     &kp END    &kp PG_UP                       &kp C_AC_SCROLL_UP      &trans  &trans  &trans   &trans    &trans
 &kp LCTRL  &trans    &kp LEFT  &kp DOWN   &kp RIGHT  &trans                          &trans                  &trans  &kp RSHFT  &kp RSHFT   &trans    &trans
 &kp LSHFT  &trans    &trans    &trans     &trans     &kp PG_DN  &trans    &trans     &kp C_AC_SCROLL_DOWN    &trans  &trans  &trans   &trans    &trans
-                               &trans     &trans     &trans     &trans    &trans     &trans                  &trans  &trans
+                               &trans     &trans     &trans     &trans    &trans     &kp RCTRL               &trans  &trans
             >;
         };
 
@@ -185,8 +185,12 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        sys_layer {
-           if-layers = <NAVI SYMBOL>;
+        sys_win_layer {
+           if-layers = <NAVI_WIN SYMBOL>;
+           then-layer = <SYS>;
+       };
+       sys_mac_layer {
+           if-layers = <NAVI_MAC SYMBOL>;
            then-layer = <SYS>;
        };
     };
