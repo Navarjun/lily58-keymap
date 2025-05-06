@@ -46,7 +46,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             display-name = "Toggle to Win";
-            bindings = <
+            bindings = <&macro_tap
                 &tog_off BASEMAC
                 &tog_off NAVI_MAC
                 &tog_on NAVI_WIN
@@ -57,7 +57,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             display-name = "Toggle to Mac";
-            bindings = <
+            bindings = <&macro_tap
                 &tog_off BASEWIN
                 &tog_off NAVI_WIN
                 &tog_on NAVI_MAC
