@@ -49,8 +49,8 @@
             bindings = <
                 &tog_off BASEMAC
                 &tog_off NAVI_MAC
-                &tog_on BASEWIN
                 &tog_on NAVI_WIN
+                &tog_on BASEWIN
             >;
         };
         mac: mac {
@@ -60,8 +60,8 @@
             bindings = <
                 &tog_off BASEWIN
                 &tog_off NAVI_WIN
-                &tog_on BASEMAC
                 &tog_on NAVI_MAC
+                &tog_on BASEMAC
             >;
         };
     };
