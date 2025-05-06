@@ -48,8 +48,6 @@
             display-name = "Toggle to Win";
             bindings = <&macro_tap
                 &tog_off BASEMAC
-                &tog_off NAVI_MAC
-                &tog_on NAVI_WIN
                 &tog_on BASEWIN
             >;
         };
@@ -59,8 +57,6 @@
             display-name = "Toggle to Mac";
             bindings = <&macro_tap
                 &tog_off BASEWIN
-                &tog_off NAVI_WIN
-                &tog_on NAVI_MAC
                 &tog_on BASEMAC
             >;
         };
