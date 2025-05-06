@@ -28,6 +28,7 @@
             tapping-term-ms = <100>;
             require-prior-idle-ms = <125>;
             quick-tap-ms = <125>;
+            hold-trigger-on-release;
         };
         tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
@@ -45,13 +46,23 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             display-name = "Toggle to Win";
-            bindings = <&macro_tap &tog_on BASEWIN &tog_on NAVI_WIN &tog_off BASEMAC &tog_off NAVI_MAC>;
+            bindings = <
+                &tog_off BASEMAC
+                &tog_off NAVI_MAC
+                &tog_on BASEWIN
+                &tog_on NAVI_WIN
+            >;
         };
         mac: mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             display-name = "Toggle to Mac";
-            bindings = <&macro_tap &tog_off BASEWIN &tog_off NAVI_WIN &tog_on BASEMAC &tog_on NAVI_MAC>;
+            bindings = <
+                &tog_off BASEWIN
+                &tog_off NAVI_WIN
+                &tog_on BASEMAC
+                &tog_on NAVI_MAC
+            >;
         };
     };
 
